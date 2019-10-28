@@ -212,6 +212,9 @@ void sieveOfAtkin(LL lowerB, LL upperB, map <LL, LL> &noOfPrimes) {
         if (n * n > upperB)
             break;
 
+        if (!primes[i])
+            continue;
+
         for (LL j = n * n; j <= upperB; j += n * n) {
             if (remainerNo.count(j % MOD)) {
 
