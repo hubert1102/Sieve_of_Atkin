@@ -8,10 +8,14 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
 
-    map <long long, long long> noOfPrimes;
+    /* noOfPrimes[ n ] stores number of primes not bigger than n and bigger
+       than the biggest smaller key than n in the map, if there is no such key
+       it count from 1.
+    */
+    map <LL, LL> noOfPrimes;
 
-    unsigned long long N, upper_bound;
-    cin >> N >> upper_bound;
+    ULL N, upper_bound;
+    cin >> upper_bound >> N;
     long long maxV = 0, V[N];
 
     for (size_t i = 0; i < N; i++) {
@@ -20,13 +24,9 @@ int main() {
         maxV = max(maxV, V[i]);
     }
 
-    (*noOfPrimes.lower_bound(2)).second++;
-    (*noOfPrimes.lower_bound(3)).second++;
-    (*noOfPrimes.lower_bound(5)).second++;
+    sieveOfAtkin(1, maxV + 1, noOfPrimes);
 
-    sieveOfAtkin(7, maxV, noOfPrimes);
-
-    long long sum = 0;
+    LL sum = 0;
 
     auto it = noOfPrimes.begin();
     for (; it != noOfPrimes.end(); ++it) {
