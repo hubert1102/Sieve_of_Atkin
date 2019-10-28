@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Hubert/Programowanie/Sieve of Atkin/main.cpp
+iostream
+-
+map
+-
+sieveOfAtkin.h
+/mnt/c/Users/Hubert/Programowanie/Sieve of Atkin/sieveOfAtkin.h
+
+/mnt/c/Users/Hubert/Programowanie/Sieve of Atkin/sieveOfAtkin.cpp
+sieveOfAtkin.h
+/mnt/c/Users/Hubert/Programowanie/Sieve of Atkin/sieveOfAtkin.h
+vector
+-
+algorithm
+-
+bitset
+-
+array
+-
+set
+-
+cmath
+-
+iostream
+-
+
+/mnt/c/Users/Hubert/Programowanie/Sieve of Atkin/sieveOfAtkin.h
+map
+-
+

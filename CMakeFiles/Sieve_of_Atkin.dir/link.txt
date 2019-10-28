@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -O3 -O3 -DNDEBUG  -rdynamic CMakeFiles/Sieve_of_Atkin.dir/main.cpp.o CMakeFiles/Sieve_of_Atkin.dir/sieveOfAtkin.cpp.o  -o Sieve_of_Atkin 
