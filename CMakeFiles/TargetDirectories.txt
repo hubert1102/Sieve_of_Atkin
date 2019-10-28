@@ -1,3 +1,0 @@
-/mnt/c/Users/Hubert/Programowanie/Sieve of Atkin/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/Hubert/Programowanie/Sieve of Atkin/CMakeFiles/Sieve_of_Atkin.dir
-/mnt/c/Users/Hubert/Programowanie/Sieve of Atkin/CMakeFiles/edit_cache.dir
