@@ -202,6 +202,21 @@ void sieveOfAtkin(LL lowerB, LL upperB, map <LL, LL> &noOfPrimes) {
               upperB, primes, remainerNo[tuple[0]], noOfPrimes);
 
 
+    /* Compute for every two r1, r2 mod 60 remainders from set {1,7,11,13,17,19,23,29,31,37,41,43,47,49,53,59}
+     * smallest positive integral a, such that r1 + r2 * a mod 60 is also from that set.
+     */
+    LL steps[MOD][MOD];
+    for (LL r : allRemainders) {
+        for (LL step : allRemainders) {
+            for (size_t i  = 1; i <= MOD; i++) {
+                if (remainerNo.count((r + step * i) % MOD)) {
+                    steps[r][step] = i;
+                    break;
+                }
+            }
+        }
+    }
+
     /* Sieves off all squareful numbers. For all primes[y] changing it's
      * value to false, decrements the correspodning value in noOfPrimes.
      */
@@ -215,7 +230,7 @@ void sieveOfAtkin(LL lowerB, LL upperB, map <LL, LL> &noOfPrimes) {
         if (!primes[i])
             continue;
 
-        for (LL j = n * n; j <= upperB; j += n * n) {
+        for (LL j = n * n; j <= upperB; j += n * n * steps[j % MOD][(n * n) % MOD]) {
             if (remainerNo.count(j % MOD)) {
 
                 // Convert number in 60k + d' notation to a number in 16k + d notation.

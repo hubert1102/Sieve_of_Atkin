@@ -16,7 +16,7 @@ int main() {
 
     ULL N, upper_bound;
     cin >> upper_bound >> N;
-    long long maxV = 0, V[N];
+    LL maxV = 0, V[N];
 
     for (size_t i = 0; i < N; i++) {
         cin >> V[i];
@@ -33,7 +33,7 @@ int main() {
         sum += (*it).second;
         (*it).second = sum;
     }
-    for (long long v : V)
+    for (LL v : V)
         cout << noOfPrimes[v] << endl;
 
 
